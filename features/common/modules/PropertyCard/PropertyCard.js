@@ -38,7 +38,6 @@ const PropertyCard = (property) => {
                              display='flex'
                              alignItems='flex-end'
                              padding='1rem'
-
                         >
                             <Text fontSize='3xl' fontWeight='medium' color='whiteAlpha.800'>
                                 {price}
