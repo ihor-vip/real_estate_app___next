@@ -1,4 +1,4 @@
-import {Box, Button, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList, Text} from "@chakra-ui/react";
+import {Box, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList, Text} from "@chakra-ui/react";
 import {HiHomeModern} from "react-icons/hi2";
 import Link from "next/link";
 import {navigationLinks} from "@/features/common/modules/Navigation/navigationConsts";
