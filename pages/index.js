@@ -1,11 +1,12 @@
-import Navigation from "@/features/common/modules/Navigation";
-import Footer from "@/features/common/modules/Footer";
+import DefaultLayout from "@/features/Layouts/DefaultLayout";
+import HeroBanner from "@/features/Home/components/HeroBanner";
 
 export default function Home() {
     return (
         <>
-            <Navigation/>
-            <Footer/>
+            <DefaultLayout>
+                <HeroBanner/>
+            </DefaultLayout>
         </>
     )
 }
