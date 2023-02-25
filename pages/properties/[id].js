@@ -4,6 +4,7 @@ import DefaultLayout from "@/features/Layouts/DefaultLayout";
 import {TbMapPin} from "react-icons/tb";
 import PropertyThumbnailSlider from "@/features/Property/components/PropertyThumbnailSlider";
 import PropertyStats from "@/features/Property/components/PropertyStats";
+import TextContentBox from "@/features/common/modules/TextContentBox";
 
 const PropertySingle = ({ property }) => {
     const {
@@ -68,6 +69,14 @@ const PropertySingle = ({ property }) => {
                             price={price}
                             sqSize={sqSize}
                         />
+                        <TextContentBox title='Description'>
+                            <Text
+                                fontWeight='light'
+                                color='gray.600'
+                                fontSize='1rem'
+                                noOfLines='4'
+                            >{description}</Text>
+                        </TextContentBox>
                     </GridItem>
                 </Grid>
             </Box>
