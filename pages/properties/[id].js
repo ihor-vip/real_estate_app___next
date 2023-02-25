@@ -93,10 +93,14 @@ const PropertySingle = ({ property }) => {
                         </TextContentBox>
                     </GridItem>
                     <GridItem colSpan={{base: 6, sm: 3}}>
-                        <PropertyYoutubeEmbed coverVideo={coverVideo}/>
+                        <TextContentBox title='Video Walkthrough'>
+                            <PropertyYoutubeEmbed coverVideo={coverVideo}/>
+                        </TextContentBox>
                     </GridItem>
                     <GridItem colSpan={{base: 6, sm: 3}}>
-                        <PropertyMatterPortEmbed panorama={panorama}/>
+                        <TextContentBox title='3D Virtual Walkthrough'>
+                            <PropertyMatterPortEmbed panorama={panorama}/>
+                        </TextContentBox>
                     </GridItem>
                 </Grid>
             </Box>
