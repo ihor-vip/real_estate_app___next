@@ -5,6 +5,7 @@ import {TbMapPin} from "react-icons/tb";
 import PropertyThumbnailSlider from "@/features/Property/components/PropertyThumbnailSlider";
 import PropertyStats from "@/features/Property/components/PropertyStats";
 import TextContentBox from "@/features/common/modules/TextContentBox";
+import PropertyYoutubeEmbed from "@/features/Property/components/PropertyYoutubeEmbed";
 
 const PropertySingle = ({ property }) => {
     const {
@@ -89,6 +90,9 @@ const PropertySingle = ({ property }) => {
                                 )) : 'Please contact us for more info'}
                             </SimpleGrid>
                         </TextContentBox>
+                    </GridItem>
+                    <GridItem colSpan={{base: 6, sm: 3}}>
+                        <PropertyYoutubeEmbed coverVideo={coverVideo}/>
                     </GridItem>
                 </Grid>
             </Box>
