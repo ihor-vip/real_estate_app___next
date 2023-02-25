@@ -6,6 +6,7 @@ import PropertyThumbnailSlider from "@/features/Property/components/PropertyThum
 import PropertyStats from "@/features/Property/components/PropertyStats";
 import TextContentBox from "@/features/common/modules/TextContentBox";
 import PropertyYoutubeEmbed from "@/features/Property/components/PropertyYoutubeEmbed";
+import PropertyMatterPortEmbed from "@/features/Property/components/PropertyMatterPortEmbed";
 
 const PropertySingle = ({ property }) => {
     const {
@@ -86,13 +87,16 @@ const PropertySingle = ({ property }) => {
                                 fontSize='1rem'
                             >
                                 {amenities.length ? amenities.map((item) => (
-                                    <Text>{item}</Text>
+                                    <Text key={item}>{item}</Text>
                                 )) : 'Please contact us for more info'}
                             </SimpleGrid>
                         </TextContentBox>
                     </GridItem>
                     <GridItem colSpan={{base: 6, sm: 3}}>
                         <PropertyYoutubeEmbed coverVideo={coverVideo}/>
+                    </GridItem>
+                    <GridItem colSpan={{base: 6, sm: 3}}>
+                        <PropertyMatterPortEmbed panorama={panorama}/>
                     </GridItem>
                 </Grid>
             </Box>
