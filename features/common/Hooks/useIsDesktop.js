@@ -19,6 +19,7 @@ export const useIsDesktop = () => {
         }
 
         window.addEventListener('resize', updateMedia)
+        return () => window.removeEventListener('resize', updateMedia)
     },[])
     return {isDesktop}
 }
