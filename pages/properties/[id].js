@@ -1,5 +1,5 @@
 import {usePropertyFormat} from "@/features/common/Hooks/usePropertyFormat";
-import {Badge, Box, Flex, Grid, GridItem, Text} from "@chakra-ui/react";
+import {Badge, Box, Flex, Grid, GridItem, SimpleGrid, Text} from "@chakra-ui/react";
 import DefaultLayout from "@/features/Layouts/DefaultLayout";
 import {TbMapPin} from "react-icons/tb";
 import PropertyThumbnailSlider from "@/features/Property/components/PropertyThumbnailSlider";
@@ -76,6 +76,18 @@ const PropertySingle = ({ property }) => {
                                 fontSize='1rem'
                                 noOfLines='4'
                             >{description}</Text>
+                        </TextContentBox>
+                        <TextContentBox title='Amenities'>
+                            <SimpleGrid
+                                columns={{base: 1, sm: 2}}
+                                fontWeight='light'
+                                color='gray.600'
+                                fontSize='1rem'
+                            >
+                                {amenities.length ? amenities.map((item) => (
+                                    <Text>{item}</Text>
+                                )) : 'Please contact us for more info'}
+                            </SimpleGrid>
                         </TextContentBox>
                     </GridItem>
                 </Grid>
