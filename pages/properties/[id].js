@@ -3,6 +3,7 @@ import {Badge, Box, Flex, Grid, GridItem, Text} from "@chakra-ui/react";
 import DefaultLayout from "@/features/Layouts/DefaultLayout";
 import {TbMapPin} from "react-icons/tb";
 import PropertyThumbnailSlider from "@/features/Property/components/PropertyThumbnailSlider";
+import PropertyStats from "@/features/Property/components/PropertyStats";
 
 const PropertySingle = ({ property }) => {
     const {
@@ -59,6 +60,14 @@ const PropertySingle = ({ property }) => {
                     </GridItem>
                     <GridItem colSpan={{base: 6, sm: 3}}>
                         <PropertyThumbnailSlider photos={photos} />
+                    </GridItem>
+                    <GridItem colSpan={{base: 6, sm: 3}}>
+                        <PropertyStats
+                            rooms={rooms}
+                            baths={baths}
+                            price={price}
+                            sqSize={sqSize}
+                        />
                     </GridItem>
                 </Grid>
             </Box>
