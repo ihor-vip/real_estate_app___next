@@ -1,6 +1,7 @@
 import DefaultLayout from "@/features/Layouts/DefaultLayout";
 import {Box, Grid, GridItem, Text} from "@chakra-ui/react";
 import TextContentBox from "@/features/common/modules/TextContentBox";
+import ContactForm from "@/features/common/modules/ContactForm";
 
 const ContactPage = () => {
     return (
@@ -14,7 +15,7 @@ const ContactPage = () => {
                 >
                     <GridItem colSpan={{base: 6, sm: 4}}>
                         <TextContentBox title='Contact Us'>
-
+                            <ContactForm />
                         </TextContentBox>
                     </GridItem>
                     <GridItem colSpan={{base: 6, sm: 2}}>
