@@ -7,11 +7,11 @@ import PropertyStats from "@/features/Property/components/PropertyStats";
 import TextContentBox from "@/features/common/modules/TextContentBox";
 import PropertyYoutubeEmbed from "@/features/Property/components/PropertyYoutubeEmbed";
 import PropertyMatterPortEmbed from "@/features/Property/components/PropertyMatterPortEmbed";
+import {getProperty} from "@/features/Property/api/getProperty";
 
 const PropertySingle = ({ property }) => {
     const {
         address,
-        coverPhoto,
         propertyType,
         price,
         title,
@@ -24,8 +24,7 @@ const PropertySingle = ({ property }) => {
         description,
         coverVideo,
         panorama,
-        amenities,
-        furnished
+        amenities
     } = usePropertyFormat(property)
     return (
         <DefaultLayout>
@@ -111,7 +110,9 @@ const PropertySingle = ({ property }) => {
 export default PropertySingle;
 
 export async function getServerSideProps(context) {
-    const property = require('@/features/data/property');
+    const {id} = context.query;
+    const property = await getProperty(id);
+
     return {
         props: { property }
     }
